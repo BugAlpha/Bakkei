@@ -258,4 +258,3 @@ cron.log
 ## License
 
 MIT. Do what you want. Just don't blame me if X bans your account.
-```
