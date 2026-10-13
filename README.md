@@ -1,4 +1,3 @@
-```markdown
 # Twitter → Facebook Video Autoposter
 
 A Python bot that scrapes the top videos from your X (Twitter) home timeline, ranks them by engagement, stitches them into one compilation, and uploads the result to a Facebook page. Runs headless, dedupes itself, and keeps a paper trail.
@@ -40,7 +39,6 @@ Because the visible numbers lie. X shows you "13.3K views" but the accessibility
 ```bash
 pip install playwright yt-dlp moviepy python-dotenv
 playwright install chromium
-```
 
 ### 2. Export your X cookies
 
