@@ -62,16 +62,16 @@ SCORE_WEIGHTS={"likes": 1.0, "retweets": 2.0, "replies": 1.5, "bookmarks": 1.0, 
 
 ```bash
 # Scrape, rank, compile, upload (top 5 new videos)
-python twitter2.py --count 5
+python main.py --count 5
 
 # Upload a local file directly, skip all the scraping
-python twitter2.py --upload-file my_video.mp4
+python main.py --upload-file my_video.mp4
 
 # If X throws a bot challenge, run once with a visible browser
-python twitter2.py --count 5 --show-browser
+python main.py --count 5 --show-browser
 
 # Slow connection? Give it more time
-python twitter2.py --count 5 --timeout 60000
+python main.py --count 5 --timeout 60000
 ```
 
 ---
@@ -149,7 +149,7 @@ It's not bulletproof — X's bot detection evolves constantly — but it removes
 
 ```
 .
-├── twitter2.py          # the whole thing
+├── main.py          # the whole thing
 ├── .env                 # your secrets (don't commit this)
 ├── cookies.txt          # your X session (definitely don't commit this)
 ├── twitter_used.txt     # auto-generated list of already-posted tweets
@@ -164,25 +164,25 @@ It's not bulletproof — X's bot detection evolves constantly — but it removes
 ### Basic daily run
 
 ```bash
-python twitter2.py --count 5
+python main.py --count 5
 ```
 
 ### Upload a pre-made compilation
 
 ```bash
-python twitter2.py --upload-file ./my_compilation.mp4
+python main.py --upload-file ./my_compilation.mp4
 ```
 
 ### Debug a login issue
 
 ```bash
-python twitter2.py --count 5 --show-browser --timeout 90000
+python main.py --count 5 --show-browser --timeout 90000
 ```
 
 ### Override everything from CLI
 
 ```bash
-python twitter2.py \
+python main.py \
   --count 10 \
   --cookies ./alt_cookies.txt \
   --used-file ./alt_used.txt \
@@ -193,7 +193,7 @@ python twitter2.py \
 ### Run on a schedule (cron, every 6 hours)
 
 ```cron
-0 */6 * * * cd /home/alpha/asura && /home/alpha/asura/.venv/bin/python twitter2.py --count 5 >> cron.log 2>&1
+0 */6 * * * cd /home/alpha/asura && /home/alpha/asura/.venv/bin/python main.py --count 5 >> cron.log 2>&1
 ```
 
 ---
