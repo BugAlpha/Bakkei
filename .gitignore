@@ -1,0 +1,6 @@
+.env
+*.env
+cookies.txt
+twitter_used.txt
+downloads_videos/
+debug/
